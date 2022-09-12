@@ -16,7 +16,8 @@ def insert_data_model(model, input_data):
                **row
             )
         )
-        db.session.commit()
+    db.session.commit()
+
 
 
 def get_all(model):
@@ -80,7 +81,7 @@ def update_model(model, pid, values):
     :return:
     '''
     try:
-        db.session.query(model).filter(model.id == pid).updates(values)
+        db.session.query(model).filter(model.id == pid).update(values)
         db.session.commit()
     except Exception as e:
         print(e)

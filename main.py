@@ -103,7 +103,7 @@ def get_user_by_id(pid):
     elif request.method == "PUT":
         data = request.json
         data_new = {
-            "id": data.get("id"),
+
             "first_name": data.get("first_name"),
             "last_name": data.get("last_name"),
             "age": data.get("age"),
@@ -117,17 +117,7 @@ def get_user_by_id(pid):
             status=200,
             mimetype="application/json"
         )
-    elif request.method == "PUT":
-        data = request.json
-        data_new = {
-            "id": data.get("id"),
-            "first_name": data.get("first_name"),
-            "last_name": data.get("last_name"),
-            "age": data.get("age"),
-            "email": data.get("email"),
-            "role": data.get("role"),
-            "phone": data.get("phone")
-        }
+
     elif request.method == "DELETE":
         delete_model(User, pid)
         return app.response_class(
@@ -189,7 +179,7 @@ def get_order_by_id(pid):
     elif request.method == "PUT":
         data = request.json
         data_new = {
-            "id": data.get("id"),
+
             "name": data.get("name"),
             "description": data.get("description"),
             "start_date": data.get("start_date"),

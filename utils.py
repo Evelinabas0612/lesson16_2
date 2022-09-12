@@ -8,7 +8,7 @@ def insert_data_model(model, input_data):
         Универсальный метод, который возвращает данные определённой модели класса
     :param model:
     :param input_data:
-    :return:
+
     '''
     for row in input_data:
         db.session.add(
